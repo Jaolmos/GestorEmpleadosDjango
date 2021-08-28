@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{object.full_name}}
+{% endblock title %}
+    
+
+{% block content %}
+{% include 'includes/header.html' %} 
+
+
+{% endblock %}
+
+
+<h1>Detalle de un empleado</h1>
+
+{{empleado}}
+
+<h2>Todos los datos</h2>
+<p>{{empleado.first_name}}</p>
+<p>{{empleado.last_name}}</p>
+<p>{{empleado.job}}</p>
+<p>{{empleado.departamento}}</p>
+<p>{{empleado.habilidades}}</p>
+

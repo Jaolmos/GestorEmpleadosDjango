@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Nuevo Departamento{% endblock title %}
+    
+
+{% block content %}
+{% include 'includes/header.html' %}    
+
+<div class="container my-4">
+    <h1>Registrar Nuevo Departamento</h1>
+    
+    <form class="row my-3" method="POST">{% csrf_token %}
+        
+        <div class="col m-3 form-group">
+            <label>Nombre:</label>
+            {{ form.nombre }}
+            
+        </div>
+        <div class="col m-3 form-group">
+            <label>Apellidos:</label>
+            {{ form.apellidos }}
+        </div>
+        <div class="col m-3 form-group">
+            <label>Departamento:</label>
+            {{ form.departamento }}
+        </div>
+        <div class="col m-3 form-group">
+            <label>Nombre Corto Departamento:</label>
+            {{ form.nombre_corto }}
+        </div>
+        
+        <div class="col-12 m-3">
+            <button type="submit" class="btn btn-success">Registrar Nuevo</button>
+        </div>        
+        
+    </form>
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+<h1>Registrar nuevo departamento</h1>
+
+<form method="POST">{% csrf_token %}
+    <h2>Datos empleado</h2>
+    <p>
+        {{form.nombre}}
+    </p>
+    <p>
+        {{form.apellidos}}
+    </p>
+    <h2>Datos de departamento</h2>
+    <p>
+        {{form.departamento}}
+    </p>
+    <p>
+        {{form.nombre_corto}}
+    </p>
+
+    
+    <button type="submit">Guardar</button>
+</form>

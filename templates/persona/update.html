@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Empleado{% endblock title %}
+    
+
+{% block content %}
+{% include 'includes/header.html' %}    
+
+<div class="container my-4">
+    <h1>Modificar empleado</h1>
+    <div class="row">
+    <form class="row my-3" method="POST">{% csrf_token %}
+        
+        <div class="col form-group">
+            <label>Nombre:</label>
+            {{ form.first_name }}
+            
+        </div>
+        <div class="col form-group">
+            <label>Apellidos:</label>
+            {{ form.last_name }}
+                
+        </div>
+        <div class="col form-group">
+            <label>Trabajo:</label>
+            {{ form.job }}
+            
+        </div>
+        <div class="col form-group">
+            <label>Departamento:</label>
+            {{ form.departamento }}
+            
+        </div>
+        <div class="col  form-group">
+            <label>Skills:</label>
+            {{ form.habilidades }}
+            
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>        
+        
+    </form>
+    </div>
+
+</div>
+
+
+{% endblock %}
+    
+
