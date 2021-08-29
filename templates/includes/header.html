@@ -14,19 +14,19 @@
       <div class="collapse navbar-collapse"  id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="{% url 'persona_app:inicio' %}" class="nav-link active">Home</a>
+            <a href="{% url 'persona_app:inicio' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'persona_app:lista_empleados' %}" class="nav-link">Empleados</a>
+            <a href="{% url 'persona_app:lista_empleados' %}" class="nav-link {% if request.path == '/lista-todos-empleados/' %}active{% endif %}">Empleados</a>
           </li>
           <li class="nav-item"> 
-            <a href="{% url 'departamento_app:departamento-lista' %}" class="nav-link">Departamentos</a>
+            <a href="{% url 'departamento_app:departamento-lista' %}" class="nav-link {% if request.path == '/departamento-lista/' %}active{% endif %}">Departamentos</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'persona_app:lista_empleados_admin' %}" class="nav-link">Administrar</a>
+            <a href="{% url 'persona_app:lista_empleados_admin' %}" class="nav-link {% if request.path == '/lista-empleados-admin/' %}active{% endif %}">Administrar</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'departamento_app:nuevo_departamento' %}" class="nav-link">Nuevo Departamento</a>
+            <a href="{% url 'departamento_app:nuevo_departamento' %}" class="nav-link {% if request.path == '/nuevo-departamento/' %}active{% endif %}">Nuevo Departamento</a>
           </li>
 
         </ul>
