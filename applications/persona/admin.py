@@ -11,6 +11,7 @@ class EmpleadAdmin(admin.ModelAdmin): #Para visualizar otros campos en el admini
         'departamento',
         'job',
         'id',
+        'full_name',
     )
 
     search_fields = ('first_name','last_name') #Buscador para filtrar por nombre o y apellidos.
