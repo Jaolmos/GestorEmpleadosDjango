@@ -25,7 +25,7 @@ class ListAllEmpleados(ListView): #ListAllEmpleados trabaja con la lista generic
     def get_queryset(self):
         palabra_clave = self.request.GET.get("keyword", '')  
         lista_trabajo = Empleado.objects.filter(
-            last_name__icontains = palabra_clave #Arreglar para que busque con full_name
+            full_name__icontains = palabra_clave #Arreglar para que busque con full_name
         )
         return lista_trabajo
 
