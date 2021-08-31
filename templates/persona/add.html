@@ -9,9 +9,9 @@
 <div class="container my-4">
     <h1>Registrar empleado</h1>
     
-    <form class="row my-3" method="POST">{% csrf_token %}
+    <form class="row my-3" method="POST" enctype="multipart/form-data">{% csrf_token %}
         
-        <div class="col form-group">
+        <div class="col  form-group">
             <label>Nombre:</label>
             {{ form.first_name }}
             
@@ -24,19 +24,20 @@
         <div class="col form-group">
             <label>Trabajo:</label>
             {{ form.job }}
-            
         </div>
         <div class="col form-group">
             <label>Departamento:</label>
             {{ form.departamento }}
-            
         </div>
         <div class="col  form-group">
             <label>Skills:</label>
             {{ form.habilidades }}
-            
         </div>
-        <div class="col-12">
+        <div class="col  form-group">
+            <label>Imagen:</label>
+            {{ form.avatar }}
+        </div>
+        <div class="col-12 my-5">
             <button type="submit" class="btn btn-success">Registrar Nuevo</button>
         </div>        
         

@@ -98,6 +98,7 @@ class EmpleadoCreateView(CreateView):
         'job',
         'departamento',
         'habilidades',
+        'avatar',
     ]
     success_url = reverse_lazy('persona_app:lista_empleados') #pagina de destino
     
