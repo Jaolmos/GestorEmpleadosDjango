@@ -28,7 +28,8 @@ class Empleado(models.Model): #Modelo para tabla 'Empleado'
     job = models.CharField(verbose_name='Trabajo', max_length=60, choices=JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     habilidades = models.ManyToManyField(Habilidades)
-    full_name = models.CharField(verbose_name='Nombre completo',max_length=140,blank=True)#No funciona
+    full_name = models.CharField(verbose_name='Nombre completo',max_length=140,blank=True)
+    avatar = models.ImageField(upload_to='empleado',blank=True,null=True)
     
 
     
