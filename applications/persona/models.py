@@ -30,9 +30,6 @@ class Empleado(models.Model): #Modelo para tabla 'Empleado'
     habilidades = models.ManyToManyField(Habilidades)
     full_name = models.CharField(verbose_name='Nombre completo',max_length=140,blank=True)
     avatar = models.ImageField(upload_to='empleado',blank=True,null=True)
-    
-
-    
 
     class Meta:
         verbose_name = 'Empleado'
