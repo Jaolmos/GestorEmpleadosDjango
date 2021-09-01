@@ -4,7 +4,6 @@ from django.urls import path
 from .import views
 
 
-
 app_name = "persona_app" #Nombre de todo el conjunto de direcciones
 
 urlpatterns = [
@@ -22,8 +21,5 @@ urlpatterns = [
     path('update-empleado/<pk>/',views.EmpleadoUpdateView.as_view(),name='modificar-empleado'),
     path('eliminar-empleado/<pk>/',views.EmpleadoDeleteView.as_view(),name='eliminar-empleado'),
     path('empleado-eliminado/',views.EmpleadoDeleteView.as_view(),name='eliminado'),
-    
-    
-    
-    
+   
     ]
